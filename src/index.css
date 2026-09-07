@@ -53,7 +53,7 @@ html.light-theme,
   color: #0f172a !important;
 }
 
-.light-theme .bg-[#050505]\/90,
+.light-theme .bg-\[\#050505\]\/90,
 .light-theme .bg-black\/80,
 .light-theme .bg-black\/90,
 .light-theme .bg-black\/95 {
