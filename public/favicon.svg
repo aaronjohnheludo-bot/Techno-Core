@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="greenYellowSwoosh" x1="20" y1="20" x2="60" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E600" />
+      <stop offset="60%" stop-color="#76E600" />
+      <stop offset="100%" stop-color="#FFE600" />
+    </linearGradient>
+
+    <linearGradient id="redBlueSwoosh" x1="180" y1="20" x2="140" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF1E1E" />
+      <stop offset="50%" stop-color="#D00000" />
+      <stop offset="100%" stop-color="#1E50FF" />
+    </linearGradient>
+
+    <radialGradient id="atomicSphereGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#E0FFFF" />
+      <stop offset="70%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </radialGradient>
+
+    <radialGradient id="sphereOuterFlare" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="coreGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- High-contrast dark badge background -->
+  <rect width="200" height="200" rx="44" fill="#050505" />
+
+  <!-- Outer ambient glow -->
+  <circle cx="100" cy="100" r="75" fill="#FF1E1E" opacity="0.15" filter="url(#coreGlow)" />
+
+  <!-- SWOOSH 1: Green to Yellow -->
+  <path
+    d="M 45,35 C 15,65 15,125 75,165 C 105,185 100,165 80,140 C 50,105 40,75 70,45 C 80,35 60,20 45,35 Z"
+    fill="url(#greenYellowSwoosh)"
+  />
+
+  <!-- SWOOSH 2: Red to Blue -->
+  <path
+    d="M 155,35 C 185,65 185,125 125,165 C 95,185 100,165 120,140 C 150,105 160,75 130,45 C 120,35 140,20 155,35 Z"
+    fill="url(#redBlueSwoosh)"
+  />
+
+  <!-- Dynamic Crossing Swoosh Lines -->
+  <path d="M 50,38 Q 20,85 70,158 Q 30,120 50,38 Z" fill="#00FF2A" opacity="0.9" />
+  <path d="M 150,38 Q 180,85 130,158 Q 170,120 150,38 Z" fill="#FF0000" opacity="0.9" />
+  <path d="M 70,158 Q 100,182 110,162 Q 80,172 70,158 Z" fill="#FFE600" />
+  <path d="M 130,158 Q 100,182 90,162 Q 120,172 130,158 Z" fill="#0055FF" />
+
+  <!-- Orbit Rings -->
+  <ellipse cx="100" cy="100" rx="44" ry="14" fill="none" stroke="#E0FFFF" stroke-width="3" opacity="0.95" />
+
+  <g transform="rotate(-30 100 100)">
+    <ellipse cx="100" cy="100" rx="44" ry="14" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.95" />
+  </g>
+
+  <g transform="rotate(30 100 100)">
+    <ellipse cx="100" cy="100" rx="44" ry="14" fill="none" stroke="#E0FFFF" stroke-width="3" opacity="0.95" />
+  </g>
+
+  <!-- Glowing Atomic Sphere -->
+  <circle cx="100" cy="100" r="24" fill="url(#sphereOuterFlare)" />
+  <circle cx="100" cy="100" r="16" fill="url(#atomicSphereGlow)" />
+  <circle cx="95" cy="95" r="5" fill="#FFFFFF" opacity="0.95" />
+</svg>
