@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-summary, .print-summary * {
+    visibility: visible;
+  }
+  .print-summary {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High-Contrast Crisp Light Mode Theme Overrides */
+html.light-theme,
+.light-theme {
+  color-scheme: light;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Base Canvas & Card Inversions */
+.light-theme .bg-\[\#050505\],
+.light-theme .bg-\[\#0a0a0a\],
+.light-theme .bg-\[\#080808\],
+.light-theme .bg-\[\#0f0f0f\],
+.light-theme .bg-black {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.light-theme .bg-white\/5,
+.light-theme .bg-white\/\[0\.02\],
+.light-theme .bg-white\/\[0\.03\],
+.light-theme .bg-white\/\[0\.05\] {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme .bg-white\/10,
+.light-theme .bg-white\/15,
+.light-theme .bg-white\/20 {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.light-theme .bg-[#050505]\/90,
+.light-theme .bg-black\/80,
+.light-theme .bg-black\/90,
+.light-theme .bg-black\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Card elevation & crisp borders for Light Mode */
+.light-theme .border-white\/5,
+.light-theme .border-white\/10,
+.light-theme .border-white\/15,
+.light-theme .border-white\/20,
+.light-theme .border-white\/30 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Text Contrast Adjustments */
+.light-theme .text-white {
+  color: #0f172a !important;
+}
+
+.light-theme .text-gray-200,
+.light-theme .text-gray-300 {
+  color: #1e293b !important;
+}
+
+.light-theme .text-gray-400 {
+  color: #334155 !important;
+}
+
+.light-theme .text-gray-500 {
+  color: #64748b !important;
+}
+
+/* Red Brand Accent & Primary Buttons in Light Mode */
+.light-theme .text-\[\#FF1E1E\] {
+  color: #dc2626 !important;
+}
+
+.light-theme .bg-\[\#FF1E1E\],
+.light-theme button.bg-\[\#FF1E1E\],
+.light-theme a.bg-\[\#FF1E1E\] {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* Ensure text on primary red elements stays white */
+.light-theme .bg-\[\#FF1E1E\] .text-white,
+.light-theme .bg-\[\#FF1E1E\] span,
+.light-theme .bg-\[\#FF1E1E\] p,
+.light-theme .bg-\[\#FF1E1E\] div,
+.light-theme button.bg-\[\#FF1E1E\] *,
+.light-theme a.bg-\[\#FF1E1E\] * {
+  color: #ffffff !important;
+}
+
+.light-theme .bg-\[\#FF1E1E\]\/10 {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+.light-theme .border-\[\#FF1E1E\]\/30,
+.light-theme .border-\[\#FF1E1E\]\/40,
+.light-theme .border-\[\#FF1E1E\]\/50,
+.light-theme .border-\[\#FF1E1E\]\/60 {
+  border-color: #f87171 !important;
+}
+
+/* Navigation & Header Light Mode Polish */
+.light-theme header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme nav {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Form Inputs, Selects & Modals in Light Mode */
+.light-theme input[type="text"],
+.light-theme input[type="email"],
+.light-theme input[type="tel"],
+.light-theme input[type="number"],
+.light-theme input[type="date"],
+.light-theme input[type="password"],
+.light-theme select,
+.light-theme textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Table styling for Light Mode */
+.light-theme table {
+  color: #0f172a !important;
+}
+
+.light-theme tr {
+  border-bottom-color: #e2e8f0 !important;
+}
+
+.light-theme th {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.light-theme td {
+  color: #1e293b !important;
+}
+
+/* Modal Backdrops & Overlays */
+.light-theme .bg-black\/80,
+.light-theme .bg-black\/70,
+.light-theme .bg-black\/90 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+/* Background Atmosphere Glows hiding or softening in Light Mode */
+.light-theme .fixed.inset-0.pointer-events-none {
+  opacity: 0.15;
+}
+
+/* Custom sleek scrollbars for modal containers */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 30, 30, 0.5);
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 30, 30, 0.9);
+}

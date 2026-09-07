@@ -1,0 +1,103 @@
+{
+  "entities": {
+    "RetailProduct": {
+      "title": "Retail Product",
+      "description": "Musical instrument or pro audio gear for retail sale",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sku": { "type": "string" },
+        "name": { "type": "string" },
+        "brand": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "stockStatus": { "type": "string" },
+        "specs": { "type": "array" }
+      },
+      "required": ["id", "name", "price"]
+    },
+    "RentalService": {
+      "title": "Rental Service",
+      "description": "Equipment or production service available for rental",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "dayRate": { "type": "number" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "features": { "type": "array" }
+      },
+      "required": ["id", "name", "dayRate"]
+    },
+    "EventPackage": {
+      "title": "Event Package",
+      "description": "All-in-one sound, lighting, and production package",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "price": { "type": "number" },
+        "capacity": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "required": ["id", "title", "price"]
+    },
+    "CustomerReview": {
+      "title": "Customer Review",
+      "description": "Customer feedback and rating",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "productName": { "type": "string" },
+        "productId": { "type": "string" },
+        "rating": { "type": "number" },
+        "testimonial": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "customerName", "rating", "testimonial"]
+    },
+    "BookingRequest": {
+      "title": "Booking Request",
+      "description": "Customer booking or quote request",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "customerName", "customerEmail"]
+    }
+  },
+  "firestore": {
+    "/retailProducts/{productId}": {
+      "schema": "RetailProduct",
+      "description": "Collection of retail products"
+    },
+    "/rentalServices/{serviceId}": {
+      "schema": "RentalService",
+      "description": "Collection of rental services"
+    },
+    "/eventPackages/{packageId}": {
+      "schema": "EventPackage",
+      "description": "Collection of event packages"
+    },
+    "/customerReviews/{reviewId}": {
+      "schema": "CustomerReview",
+      "description": "Collection of customer reviews"
+    },
+    "/bookings/{bookingId}": {
+      "schema": "BookingRequest",
+      "description": "Collection of customer booking requests"
+    },
+    "/technocore_state/{docId}": {
+      "schema": "object",
+      "description": "Main application store document"
+    }
+  }
+}

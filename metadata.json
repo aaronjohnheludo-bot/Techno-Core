@@ -1,0 +1,8 @@
+{
+  "name": "Techno Core",
+  "description": "Davao City\u0027s premier retail store for musical instruments \u0026 pro sound gear, and full-service event production \u0026 rental (LED walls, lights, staging, mega tents, generators).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
